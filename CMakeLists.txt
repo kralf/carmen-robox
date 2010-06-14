@@ -15,14 +15,9 @@ remake_project(
   PREFIX carmen-
 )
 
-remake_pack_deb(carmen-interface tulibs)
+remake_pack_deb(librobox carmen-interface)
 remake_pack_deb(
   COMPONENT dev
   DESCRIPTION "development headers"
-  carmen_robox carmen-interface-dev tulibs-dev
-)
-remake_pack_deb(
-  ARCH all
-  COMPONENT doc
-  DESCRIPTION "documentation"
+  carmen_robox librobox-dev carmen-interface-dev
 )

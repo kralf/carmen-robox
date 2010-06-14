@@ -1,4 +1,4 @@
-remake_project_option(WITH_ERA "Embedded Robot Arm support" ON)
+remake_find_library(robox robox.h PACKAGE librobox)
 
 remake_define(REDHAT_52 ON)
 remake_define(REDHAT_6 ON)
