@@ -66,6 +66,7 @@ robox_bumper_state_t robox_bumper_get_state(
 
 /** \brief Retrieve bumper segment states
   * \param[in] bumper The bumper to retrieve the segment states for.
+  * \param[out] segment_states The retrieved bumper segment states.
   * \return The resulting device error code.
   */
 int robox_bumper_get_segment_states(
