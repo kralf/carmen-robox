@@ -131,10 +131,12 @@ int main(int argc, char **argv) {
     fprintf(stderr,"2. Press button \"%d\" to activate/deactivate the "
       "joystick.\n", joystick_btn_activate);
   }
+#ifdef WITH_ERA
   fprintf(stderr,"3. Press button \"%d\" to close in the arm,\n"
                  "   button \"%d\" to brace the arm.\n"
                  "   button \"%d\" to stop the arm.\n",
     joystick_btn_arm_close, joystick_btn_arm_brace, joystick_btn_arm_stop);
+#endif
   if (joystick_btn_deadman > 0)
     fprintf(stderr,"4. Hold button \"%d\" to keep the robot moving.\n\n",
       joystick_btn_deadman);
