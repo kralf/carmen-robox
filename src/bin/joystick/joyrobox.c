@@ -40,6 +40,8 @@ double robot_max_rv;
 carmen_joystick_type joystick;
 int joystick_activated = 0;
 
+int joystick_verbose = 0;
+
 void send_base_velocity_command(double tv, double rv) {
   IPC_RETURN_TYPE err;
   static carmen_base_velocity_message v;
@@ -59,6 +61,9 @@ void send_base_velocity_command(double tv, double rv) {
   else if (v.rv < -robot_max_rv)
     v.rv = -robot_max_rv;
 
+  if (joystick_verbose)
+    fprintf(stdout, "tv: %5.2f m/s  rv: %5.2f rad/s\n", v.tv, v.rv);
+  
   err = IPC_publishData(CARMEN_BASE_VELOCITY_NAME, &v);
   carmen_test_ipc(err, "Could not publish", CARMEN_BASE_VELOCITY_NAME);
 }
@@ -106,12 +111,31 @@ void read_parameters(int argc, char **argv) {
 }
 
 int main(int argc, char **argv) {
+  char* joystick_arg_dev = 0;
+  int err;
   double cmd_tv = 0, cmd_rv = 0;
   double timestamp;
+
+  if ((argc > 1) && (!strcmp(argv[1], "-v")))
+    joystick_verbose = 1;
+  if ((argc == 2) || ((argc == 3) && (joystick_verbose)))
+    joystick_arg_dev = argv[1+joystick_verbose];
+  else {
+    fprintf(stderr, "usage: %s [-v] [DEV]\n", argv[0]);
+    return -1;
+  }
 
   carmen_ipc_initialize(argc, argv);
   carmen_param_check_version(argv[0]);
   read_parameters(argc, argv);
+
+  if (joystick_arg_dev)
+    joystick_dev = joystick_arg_dev;
+
+  err = IPC_defineMsg(CARMEN_BASE_VELOCITY_NAME, IPC_VARIABLE_LENGTH,
+                      CARMEN_BASE_VELOCITY_FMT);
+  carmen_test_ipc_exit(err, "Could not define", CARMEN_BASE_VELOCITY_NAME);
+  
   signal(SIGINT, sig_handler);
 
   fprintf(stderr,"Looking for joystick at device: %s\n", joystick_dev);
@@ -167,7 +191,7 @@ int main(int argc, char **argv) {
           cmd_tv = (joystick.axes[joystick_axis_long]) ?
             -joystick.axes[joystick_axis_long]/32767.0*robot_max_tv : 0.0;
           cmd_rv = (joystick.axes[joystick_axis_lat]) ?
-            joystick.axes[joystick_axis_lat]/32767.0*robot_max_rv : 0.0;
+            -joystick.axes[joystick_axis_lat]/32767.0*robot_max_rv : 0.0;
         }
         else {
           cmd_tv = 0.0;
