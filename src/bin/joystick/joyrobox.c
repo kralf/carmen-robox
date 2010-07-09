@@ -120,7 +120,7 @@ int main(int argc, char **argv) {
     joystick_verbose = 1;
   if ((argc == 2) || ((argc == 3) && (joystick_verbose)))
     joystick_arg_dev = argv[1+joystick_verbose];
-  else {
+  else if (argc > 2) {
     fprintf(stderr, "usage: %s [-v] [DEV]\n", argv[0]);
     return -1;
   }
