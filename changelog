@@ -1,0 +1,358 @@
+carmen-robox (0.1-59) lucid; urgency=low
+
+  * Release distribution
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Fri, 15 Feb 2013 10:38:00 +0100
+
+carmen-robox (0.1-58) unstable; urgency=low
+
+  * Fixed argc bug in joyrobox
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Fri, 09 Jul 2010 10:51:23 +0200
+
+carmen-robox (0.1-57) unstable; urgency=low
+
+  * Fixed joyrobox sign of commanded r_v
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Fri, 09 Jul 2010 08:48:41 +0200
+
+carmen-robox (0.1-56) unstable; urgency=low
+
+  * Removed joyrobox message on arm control when WITH_ERA is undefined
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Wed, 23 Jun 2010 15:15:19 +0200
+
+carmen-robox (0.1-55) unstable; urgency=low
+
+  * Fixed rearlaser_angular_offset which is now given in radians
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Wed, 23 Jun 2010 15:09:13 +0200
+
+carmen-robox (0.1-54) unstable; urgency=low
+
+  * Replaced add_definitions() by remake_define()
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Tue, 22 Jun 2010 11:27:46 +0200
+
+carmen-robox (0.1-53) unstable; urgency=low
+
+  * Moved carmen.sh to plugin directory
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Tue, 15 Jun 2010 17:14:42 +0200
+
+carmen-robox (0.1-52) unstable; urgency=low
+
+  * Removed INSTALL parameter for configuration file targets
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Tue, 15 Jun 2010 15:23:38 +0200
+
+carmen-robox (0.1-51) unstable; urgency=low
+
+  * Re-added robox base library
+  * Fixed ERA settings
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Mon, 14 Jun 2010 22:50:17 +0200
+
+carmen-robox (0.1-50) unstable; urgency=low
+
+  * Removed documentation and librobox code
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Mon, 14 Jun 2010 21:58:41 +0200
+
+carmen-robox (0.1-49) unstable; urgency=low
+
+  * Added documentation of the base library
+  * Enhanced packaging information
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Mon, 14 Jun 2010 19:47:41 +0200
+
+carmen-robox (0.1-48) unstable; urgency=low
+
+  * Fixed odometry sign error
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Thu, 17 Dec 2009 17:37:58 +0100
+
+carmen-robox (0.1-47) unstable; urgency=low
+
+  * Switched off raw laser logging in CARMEN configuration file
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Thu, 17 Dec 2009 15:54:10 +0100
+
+carmen-robox (0.1-46) unstable; urgency=low
+
+  * Removed USE_TCP862 compiler switches
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Fri, 11 Dec 2009 17:31:02 +0100
+
+carmen-robox (0.1-45) unstable; urgency=low
+
+  * Corrected package name
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Fri, 11 Dec 2009 17:26:43 +0100
+
+carmen-robox (0.1-44) unstable; urgency=low
+
+  * Moved CARMEN templates
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Fri, 11 Dec 2009 17:21:51 +0100
+
+carmen-robox (0.1-43) unstable; urgency=low
+
+  * ReMake port of carmen-robox
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Fri, 11 Dec 2009 17:18:09 +0100
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Added CARMEN robot module to the startup scripts
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Fri, 11 Dec 2009 14:34:06 +0100
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Switched CARMEN version in RoboX Linux to 0.7.4
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Thu, 10 Dec 2009 18:44:50 +0100
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Fixed robox.ini laser device settings
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Wed, 09 Dec 2009 16:30:36 +0100
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Added laser startup script
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Wed, 09 Dec 2009 15:34:11 +0100
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * RoboX laser works on the TCP862
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Wed, 09 Dec 2009 14:59:56 +0100
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Changed joystick button assignment in robox.ini
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Thu, 29 Oct 2009 11:24:58 +0100
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Adapted joyrobox to the new Logitech Cordless RumblePad
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Tue, 27 Oct 2009 11:36:39 +0100
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Connected joystick to RoboX and changed joystick device to js0
+  * Fixed joyrobox to deal with disabled activation button
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Mon, 12 Oct 2009 12:29:52 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Some ERA safety addons to RoboX joystick control
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Mon, 15 Jun 2009 13:18:41 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Integrated ERA stop message with joystick control
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Mon, 15 Jun 2009 13:12:50 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * RoboX joystick control moves arm
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Mon, 15 Jun 2009 12:39:38 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Entered missing joystick configuration into robox.ini
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Mon, 15 Jun 2009 10:26:12 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Joystick sends commands to the arm
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Mon, 15 Jun 2009 10:22:51 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Removed debug output from RoboX velocity control
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Mon, 15 Jun 2009 07:20:33 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * CARMEN init script skeleton conformity
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Sun, 14 Jun 2009 18:31:42 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Fixed CARMEN init script bug
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Sun, 14 Jun 2009 18:29:30 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Added options to CARMEN module init scripts
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Sun, 14 Jun 2009 18:04:48 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Updated init script skeleton for CARMEN modules
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Sun, 14 Jun 2009 17:48:39 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Init script skeleton for CARMEN modules
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Sun, 14 Jun 2009 17:41:19 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Added RoboX joystick control through the Logitech Attack 3
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Sun, 14 Jun 2009 15:06:14 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Nano editor in RoboX linux root filesystem, changed runlevels for CARMEN
+    modules
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Sun, 14 Jun 2009 13:45:38 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Added CARMEN module startup functions
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Sun, 14 Jun 2009 10:32:42 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Removed obsolete roboxlib sources
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Sun, 14 Jun 2009 09:27:14 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * RoboX control parameters tuned
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Sat, 13 Jun 2009 22:12:42 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Odometry and bumpers working in CARMEN
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Sat, 13 Jun 2009 15:28:12 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * RoboX hardware implemented in CARMEN base library
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Fri, 12 Jun 2009 15:48:35 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * CARMEN base for RoboX initial revision
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Thu, 11 Jun 2009 18:28:19 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * RoboxSetSpeed with PID Controller
+
+ -- jennef <kralf@unknown>  Thu, 11 Jun 2009 17:41:19 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * instabil speed
+
+ -- jennef <kralf@unknown>  Wed, 10 Jun 2009 19:08:03 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Erroneous odometry integration
+
+ -- jennef <kralf@unknown>  Tue, 09 Jun 2009 16:24:40 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Serial and laser testing
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Tue, 09 Jun 2009 12:40:14 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * RoboX moves for the first time
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Mon, 08 Jun 2009 18:12:32 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Roboxlib initial revision
+
+ -- jennef <kralf@unknown>  Mon, 08 Jun 2009 11:29:11 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+    * Refactored version for pull model.
+
+ -- avasquez <kralf@unknown>  Thu, 04 Jun 2009 11:40:37 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+    * Ralf's here, starting refactoring.
+
+ -- jennef <kralf@unknown>  Thu, 04 Jun 2009 11:24:35 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+    * First try of Fabian's version.
+
+ -- jennef <kralf@unknown>  Tue, 02 Jun 2009 13:31:58 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+    * Before Fabian's version.
+
+ -- jennef <kralf@unknown>  Tue, 02 Jun 2009 13:28:13 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+    * Added first version of roboxlib.
+
+ -- avasquez <kralf@unknown>  Mon, 01 Jun 2009 13:18:07 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Lasers work individually
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Sat, 26 Apr 2008 21:28:55 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * Literature update
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Sat, 26 Apr 2008 17:08:50 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * SBS Greenspan cPCI-100a carrier and TEWS TIP866 serial module work with
+    vendor driver
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Sat, 26 Apr 2008 15:00:41 +0200
+
+carmen-robox (0.1) unstable; urgency=low
+
+  * ICP-Multi I/O board driver seems to be functional in robox-linux
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Fri, 18 Apr 2008 22:45:04 +0200

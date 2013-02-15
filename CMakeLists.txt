@@ -15,9 +15,28 @@ remake_project(
   PREFIX carmen-
 )
 
-remake_pack_deb(librobox carmen-interface)
+remake_doc(
+  html
+)
+
+remake_pack_deb(
+  librobox carmen-interface
+)
 remake_pack_deb(
   COMPONENT dev
   DESCRIPTION "development headers"
   carmen_robox librobox-dev carmen-interface-dev
+)
+remake_pack_deb(
+  ARCH all
+  COMPONENT doc
+  DESCRIPTION "documentation"
+)
+
+remake_distribute_deb(
+  DISTRIBUTION lucid
+  SECTION libs
+  UPLOAD ppa:kralf/asl
+  DEPENDS remake librobox-dev carmen-interface-dev doxygen
+  PASS CMAKE_BUILD_TYPE CARMEN_ROBOX_SUBVERSION_REVISION
 )
