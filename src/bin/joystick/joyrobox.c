@@ -22,7 +22,7 @@
 #include <carmen/joyctrl.h>
 
 #ifdef WITH_ERA
-#include <carmen/era_interface.h>
+#include <carmen-era/era_interface.h>
 #endif
 
 char* joystick_dev;

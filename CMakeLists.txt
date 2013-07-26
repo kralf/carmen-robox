@@ -3,16 +3,15 @@ cmake_minimum_required(VERSION 2.6)
 include(ReMake)
 
 remake_project(
-  "CARMEN RoboX"
+  carmen-robox
   VERSION 0.1
   RELEASE alpha
   SUMMARY "CARMEN modules for the RoboX platform."
   AUTHOR "Ralf Kaestner"
   CONTACT "ralf.kaestner@gmail.com"
-  HOME "http://aslforge.ethz.ch/projects/carmen-robox"
+  HOME "http://github.com/kralf/carmen-robox"
   LICENSE "GNU Lesser General Public License (LGPL)"
   INSTALL /usr
-  FILENAME carmen-robox
   PREFIX carmen-
 )
 
@@ -21,12 +20,12 @@ remake_doc(
 )
 
 remake_pack_deb(
-  librobox carmen-interface
+  DEPENDS librobox carmen-interface carmen-era
 )
 remake_pack_deb(
   COMPONENT dev
   DESCRIPTION "development headers"
-  carmen-robox librobox-dev carmen-interface-dev
+  DEPENDS carmen-robox librobox-dev carmen-interface-dev
 )
 remake_pack_deb(
   ARCH all
@@ -38,6 +37,13 @@ remake_distribute_deb(
   DISTRIBUTION lucid
   SECTION libs
   UPLOAD ppa:kralf/asl
-  DEPENDS remake librobox-dev carmen-interface-dev doxygen
-  PASS CMAKE_BUILD_TYPE CARMEN_ROBOX_SUBVERSION_REVISION
+  DEPENDS carmen-dev carmen-era-dev librobox-dev remake pkg-config doxygen
+  PASS CMAKE_BUILD_TYPE CARMEN_ROBOX_GIT_REVISION
+)
+remake_distribute_deb(
+  DISTRIBUTION precise
+  SECTION libs
+  UPLOAD ppa:kralf/asl
+  DEPENDS carmen-dev carmen-era-dev librobox-dev remake pkg-config doxygen
+  PASS CMAKE_BUILD_TYPE CARMEN_ROBOX_GIT_REVISION
 )

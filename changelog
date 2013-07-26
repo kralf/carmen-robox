@@ -1,3 +1,10 @@
+carmen-robox (0.1-61) unstable; urgency=low
+
+  * Added pkg-config file
+  * Release distributions
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Fri, 26 Jul 2013 16:12:00 +0100
+
 carmen-robox (0.1-60) unstable; urgency=low
 
   * Added changelog

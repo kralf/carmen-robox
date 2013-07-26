@@ -1,8 +1,6 @@
-remake_find_library(carmen-joyctrl joyctrl.h PACKAGE carmen)
-
-if(WITH_ERA)
-  remake_find_library(carmen-era_interface era_interface.h PACKAGE carmen-era)
-endif(WITH_ERA)
-
-remake_add_executables(LINK ${CARMEN_PARAM_INTERFACE_LIBRARY}
-  ${CARMEN_JOYCTRL_LIBRARY})
+if(CARMEN_ERA_FOUND)
+  remake_define(WITH_ERA 1)
+  remake_add_executables(LINK ${CARMEN_ERA_LIBRARIES} ${CARMEN_LIBRARIES})
+else(CARMEN_ERA_FOUND)
+  remake_add_executables(LINK ${CARMEN_LIBRARIES})
+endif(CARMEN_ERA_FOUND)
