@@ -12,6 +12,7 @@ remake_project(
   HOME "http://aslforge.ethz.ch/projects/carmen-robox"
   LICENSE "GNU Lesser General Public License (LGPL)"
   INSTALL /usr
+  FILENAME carmen-robox
   PREFIX carmen-
 )
 
@@ -25,7 +26,7 @@ remake_pack_deb(
 remake_pack_deb(
   COMPONENT dev
   DESCRIPTION "development headers"
-  carmen_robox librobox-dev carmen-interface-dev
+  carmen-robox librobox-dev carmen-interface-dev
 )
 remake_pack_deb(
   ARCH all
