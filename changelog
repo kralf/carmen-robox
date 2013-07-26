@@ -1,3 +1,9 @@
+carmen-robox (0.1-62) unstable; urgency=low
+
+  * Fixed library name conflict for carmen-robox binary
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Fri, 26 Jul 2013 16:38:00 +0100
+
 carmen-robox (0.1-61) unstable; urgency=low
 
   * Added pkg-config file
