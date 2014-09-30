@@ -47,3 +47,10 @@ remake_distribute_deb(
   DEPENDS carmen-dev carmen-era-dev librobox-dev remake pkg-config doxygen
   PASS CMAKE_BUILD_TYPE CARMEN_ROBOX_GIT_REVISION
 )
+remake_distribute_deb(
+  DISTRIBUTION trusty
+  SECTION libs
+  UPLOAD ppa:kralf/asl
+  DEPENDS carmen-dev carmen-era-dev librobox-dev remake pkg-config doxygen
+  PASS CMAKE_BUILD_TYPE CARMEN_ROBOX_GIT_REVISION
+)
